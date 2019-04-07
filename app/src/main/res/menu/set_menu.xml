@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/save_menu"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_save"
+        android:title="Save"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/objective_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_target"
+        android:title="Objectives"
+        android:visible="true"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/about_menu"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_info"
+        android:title="About"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>

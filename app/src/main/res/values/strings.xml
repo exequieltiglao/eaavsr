@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">EAAVSR</string>
+
+    <string name="kws_caption">To start demonstration say \"start\".</string>
+    <string name="menu_caption">Activating....</string>
+    <string name="digits_caption">digits</string>
+
+    <string name="default_message">I need help! Please help me!</string>
+    <string name="about">About</string>
+    <string name="aboutDev">This mobile application is a partial requirement for 4th year students
+        whose currently taking their Thesis II and System Analysis Design II subjects at
+        Eulogio \"Amang\" Rodriguez Institute of Science and Technology.
+    </string>
+
+    <string name="teamMembers">Team Members: \n
+        \t Arevalo, Rosemarie B. \n
+        \t Collarga, Rhea Jane G. \n
+        \t Doromal, Kristine B. \n
+        \t Tiglao, Exequiel Justin R. \n\n
+
+        Team Adviser: \n
+        \t Ms. Shiela Marie M. Matias \n
+    </string>
+
+    <string name="appObjectives">The main objective of the speech recognition is to devise a computer program
+        that distinguishes between speakers. It will translate to our system that will help people so easily
+        contact their relatives when an incident comes by saying just a word. The application will get the device\'s
+        current location that will allow the user to inform the selected contact when the user is in danger.
+        In this case, speech recognition has alternative way to send messages
+        automatically when the user can\'t able to open or use their phone in different situations.
+    </string>
+    <string name="objective">Objective</string>
+
+</resources>
