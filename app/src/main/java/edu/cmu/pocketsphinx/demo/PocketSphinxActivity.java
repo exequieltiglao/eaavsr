@@ -101,7 +101,7 @@ public class PocketSphinxActivity extends AppCompatActivity implements
     private ImageButton sendBtn;
     private EditText smsMessage;
     private TextView smsStatus;
-    private ImageButton btnMain;
+    private Button btnMain;
 
     public static final String SMS_SENT_ACTION = "com.andriodgifts.gift.SMS_SENT_ACTION";
     public static final String SMS_DELIVERED_ACTION = "com.andriodgifts.gift.SMS_DELIVERED_ACTION";
@@ -159,28 +159,25 @@ public class PocketSphinxActivity extends AppCompatActivity implements
         caption_text = (TextView) findViewById(R.id.caption_text);
         result_text = (TextView) findViewById(R.id.result_text);
 
-        tvGPSCoordinates = (TextView) findViewById(R.id.tvGPSCoordinates);
+        tvGPSCoordinates = (TextView) findViewById(R.id.tv_coordinates);
 
-        etMessage = (EditText) findViewById(R.id.etMessage);
-        smsMessage = (EditText) findViewById(R.id.etMessage);
-        smsStatus = (TextView) findViewById(R.id.message_status);
-        etMessageLocation = (EditText) findViewById(R.id.etMessageLocation);
+        etMessage = (EditText) findViewById(R.id.et_message);
+        smsMessage = (EditText) findViewById(R.id.et_message);
+        etMessageLocation = (EditText) findViewById(R.id.et_location);
 
-        tvName1 = (TextView) findViewById(R.id.contact_name_one);
-        tvNumber1 = (TextView) findViewById(R.id.contact_number_one);
-        tvName2 = (TextView) findViewById(R.id.contact_name_two);
-        tvNumber2 = (TextView) findViewById(R.id.contact_number_two);
-        tvName3 = (TextView) findViewById(R.id.contact_name_three);
-        tvNumber3 = (TextView) findViewById(R.id.contact_number_three);
+        tvName1 = (TextView) findViewById(R.id.name_one);
+        tvNumber1 = (TextView) findViewById(R.id.number_one);
+        tvName2 = (TextView) findViewById(R.id.name_two);
+        tvNumber2 = (TextView) findViewById(R.id.number_two);
+        tvName3 = (TextView) findViewById(R.id.name_three);
+        tvNumber3 = (TextView) findViewById(R.id.number_three);
 
-        sendBtn = (ImageButton) findViewById(R.id.imbSend);
-        btnMain = (ImageButton) findViewById(R.id.main_button);
+        sendBtn = (ImageButton) findViewById(R.id.btn_send);
+        btnMain = (Button) findViewById(R.id.btn_trigger);
 
-        imgbPickContact_One = (ImageButton) findViewById(R.id.imPickAContact1);
-        imgbPickContact_Two = (ImageButton) findViewById(R.id.imPickAContact2);
-        imgbPickContact_Three = (ImageButton) findViewById(R.id.imPickAContact3);
-
-        imgbCallButton = (ImageButton) findViewById(R.id.callButton);
+        imgbPickContact_One = (ImageButton) findViewById(R.id.contact_one);
+        imgbPickContact_Two = (ImageButton) findViewById(R.id.contact_two);
+        imgbPickContact_Three = (ImageButton) findViewById(R.id.contact_three);
 
         caption_text.setText("Preparing the recognizer");
 
@@ -209,12 +206,12 @@ public class PocketSphinxActivity extends AppCompatActivity implements
         });
 
         //CALL BUTTON
-        imgbCallButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                callContactNumber();
-            }
-        });
+//        imgbCallButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                callContactNumber();
+//            }
+//        });
 
         //show error dialog if GoolglePlayServices not available
         if (!isGooglePlayServicesAvailable()) {
@@ -429,15 +426,15 @@ public class PocketSphinxActivity extends AppCompatActivity implements
 
     //TO DO WHEN BUTTON IS CLICKED
     public void PickContact(View view) {
-        if (view.getId() == R.id.imPickAContact1) {
+        if (view.getId() == R.id.contact_one) {
             Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
             startActivityForResult(i, RESULT_PICK_CONTACT);
             PICK_COUNTER = 1;
-        } else if (view.getId() == R.id.imPickAContact2) {
+        } else if (view.getId() == R.id.contact_two) {
             Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
             startActivityForResult(i, RESULT_PICK_CONTACT);
             PICK_COUNTER = 2;
-        } else if (view.getId() == R.id.imPickAContact3) {
+        } else if (view.getId() == R.id.contact_three) {
             Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
             startActivityForResult(i, RESULT_PICK_CONTACT);
             PICK_COUNTER = 3;
