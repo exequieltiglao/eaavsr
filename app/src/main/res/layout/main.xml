@@ -1,386 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     android:focusable="true"
-    android:theme="@style/MyCustomTheme"
     tools:context=".PocketSphinxActivity" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageButton
+        android:id="@+id/contact_one"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+
+        android:background="@drawable/ic_person_white_24dp"
+        android:onClick="PickContact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_one"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:focusable="true" >
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/gray"
-            android:layout_marginBottom="1dp" >
+        android:text="Name: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/contact_one"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imPickAContact1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/darkGray"
-                android:onClick="PickContact"
-                android:src="@drawable/ic_person_white_24dp" />
+    <TextView
+        android:id="@+id/number_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Number: "
 
-            <TextView
-                android:id="@+id/contact_name_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:text="Name: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/name_one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/contact_number_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:text="Number: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+    <ImageButton
+        android:id="@+id/contact_two"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
 
-        </LinearLayout>
+        android:background="@drawable/ic_person_white_24dp"
+        android:onClick="PickContact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_one" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/gray"
-            android:layout_marginBottom="1dp" >
+    <TextView
+        android:id="@+id/name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
 
-            <ImageButton
-                android:id="@+id/imPickAContact2"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/darkGray"
-                android:onClick="PickContact"
-                android:src="@drawable/ic_person_white_24dp" />
+        android:text="Name: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/contact_two"
+        app:layout_constraintTop_toBottomOf="@id/name_one" />
 
-            <TextView
-                android:id="@+id/contact_name_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:text="Name: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+    <TextView
+        android:id="@+id/number_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Number: "
 
-            <TextView
-                android:id="@+id/contact_number_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:text="Number: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/name_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number_one" />
 
-        </LinearLayout>
+    <ImageButton
+        android:id="@+id/contact_three"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:background="@color/gray"
-            android:orientation="horizontal">
+        android:background="@drawable/ic_person_white_24dp"
+        android:onClick="PickContact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_two" />
 
-            <ImageButton
-                android:id="@+id/imPickAContact3"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/darkGray"
-                android:onClick="PickContact"
-                android:src="@drawable/ic_person_white_24dp" />
+    <TextView
+        android:id="@+id/name_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
 
-            <TextView
-                android:id="@+id/contact_name_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:text="Name: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+        android:text="Name: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/contact_three"
+        app:layout_constraintTop_toBottomOf="@id/name_two" />
 
-            <TextView
-                android:id="@+id/contact_number_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:text="Number: "
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="17sp" />
+    <TextView
+        android:id="@+id/number_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Number: "
 
-        </LinearLayout>
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/name_three"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number_two" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginBottom="3dp"
-            android:background="@color/red"
-            android:orientation="horizontal"
-            android:padding="3dp">
+    <ImageView
+        android:id="@+id/location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/ic_message_white_24dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/ic_message_white_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_three" />
 
-            <EditText
-                android:id="@+id/etMessage"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:autoLink="map"
-                android:background="@color/black"
-                android:ems="10"
-                android:hint="Enter Message"
-                android:inputType="textMultiLine"
-                android:maxLength="700"
-                android:padding="5dp"
-                android:text="@string/default_message"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="18sp" />
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/darkRed"
+        android:focusable="false"
+        android:hint="Type your message here"
+        android:inputType="textMultiLine"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/white"
 
-            <!--android:text="@string/default_message"-->
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/location"
+        app:layout_constraintTop_toBottomOf="@id/name_three" />
 
-            <ImageButton
-                android:id="@+id/imbSend"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/ic_send_white_24dp" />
+    <ImageButton
+        android:id="@+id/btn_send"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/ic_send_white_24dp"
 
-        </LinearLayout>
+        android:onClick="btnTriggerApp"
+        app:layout_constraintLeft_toRightOf="@id/et_message"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginBottom="3dp"
-            android:background="@color/gray"
-            android:orientation="horizontal"
-            android:padding="3dp"
-            android:paddingEnd="45dp" >
+    <ImageView
+        android:id="@+id/gps"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/ic_location_on_white_24dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
 
-            <EditText
-                android:id="@+id/etMessageLocation"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:autoLink="map"
-                android:ems="10"
-                android:hint="Your Location"
-                android:inputType="textMultiLine"
-                android:maxLength="700"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:focusable="false"
-                android:textSize="18sp"
-                android:padding="5dp"
-                android:background="@color/black" />
+        android:background="@drawable/ic_location_on_white_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location" />
 
-        </LinearLayout>
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/darkRed"
+        android:focusable="false"
+        android:hint="Your location will be displayed here"
+        android:inputType="textMultiLine"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/white"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/location"
+        app:layout_constraintTop_toBottomOf="@id/et_message" />
 
-            <TextView
-                android:id="@+id/message_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_weight="0.5"
-                android:textAlignment="viewEnd"
-                android:text="No message was sent yet."
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/white" />
+    <ImageView
+        android:id="@+id/coordinates"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
 
-        </LinearLayout>
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/gray"
-            android:layout_marginBottom="25dp"
-            android:layout_marginTop="2dp"
-            android:orientation="horizontal" >
+        android:background="@drawable/ic_my_location_white_36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gps" />
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/ic_my_location_white_36dp"
-                android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/tv_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
 
-            <TextView
-                android:id="@+id/tvGPSCoordinates"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GPS COORDINATES"
-                android:textColorHint="@color/white"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:autoLink="map"
-                android:gravity="start"
-                android:textAlignment="textStart"
-                android:textColorLink="@color/black" />
+        android:text="GPS COORDINATES"
+        android:textColor="@color/white"
 
-        </LinearLayout>
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/coordinates"
+        app:layout_constraintTop_toBottomOf="@id/et_location" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
+    <Button
+        android:id="@+id/btn_trigger"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shapes"
 
-            <ImageButton
-                android:id="@+id/main_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/ic_error_red_600_48dp"
-                android:layout_gravity="center"
-                android:onClick="btnTriggerApp"
-                android:contentDescription="TAP TO SEND HELP"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="25dp" />
+        android:text="TRIGGER"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
 
-            <ImageButton
-                android:id="@+id/callButton"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/ic_call_red_500_48dp"
-                android:layout_gravity="center"
-                android:contentDescription="TAP TO CALL HELP" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_coordinates" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="result"
+        android:textColor="@color/white"
+        android:visibility="invisible"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TAP TRIGGER BUTTON TO SEND HELP"
-                android:textAlignment="center"
-                android:textColor="@color/grayish"
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coordinates" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TAP CALL BUTTON TO CALL FOR HELP"
-                android:textAlignment="center"
-                android:textColor="@color/grayish"
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="18sp" />
+    <TextView
+        android:id="@+id/caption_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="caption"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_text"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="(First Contact Will Be Called)"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="@color/grayish"
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:textSize="13sp" />
-
-        <TextView
-            android:id="@+id/caption_text"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:visibility="invisible"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:typeface="sans" />
-
-        <TextView
-            android:id="@+id/result_text"
-            android:textColor="@color/white"
-            android:text="result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:visibility="invisible"
-            android:layout_gravity="center" />
-
-    </LinearLayout>
+        />
 
 
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
